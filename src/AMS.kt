@@ -8,10 +8,19 @@ fun main(args: Array<String>): Unit {
 
     val message = "It is ${if (temperature > 30) "hot" else "not hot"} today!"
     println(message)
+    feedTheFish()
 }
 
 fun feedTheFish() {
-    
+    val day = randomDay()
+    val food = "pellets"
+    println("Today is $day and the fish eat $food")
+}
+
+fun randomDay() : String {
+    val week = listOf<String>("Monday", "Tuesday", "Wednesday",
+            "Thursday", "Friday", "Saturday", "Sunday")
+    return week[Random().nextInt(7)]
 }
 
 fun dayOfWeek() {

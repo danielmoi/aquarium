@@ -131,7 +131,23 @@ val message = "You are ${if (temperature > 50) "hot" else "fine"}"
 ## Exercise: Greetings, Kotlin
 ```kotlin
 fun main(args: Array<String>) {
-    var message = "Good ${if (args[0].toInt() < 12) "morning" else "night"} Kotlin"
+    var message = "Good ${if (args[0].toInt() < 12) "morning" else "night"}, Kotlin"
     println(message)
 }
 ```
+## Random Day
+```kotlin
+fun randomDay() : String {
+    val week = listOf<String>("Monday", "Tuesday", "Wednesday",
+            "Thursday", "Friday", "Saturday", "Sunday")
+    return week[Random().nextInt(7)]
+}
+```
+
+`Random` is a Java library.
+`7` is the boundary, and is excluded.
+
+
+## Fortune Cookies
+`main` must have an `args: Array<String>` for the file to be Run-able (why?)
+
