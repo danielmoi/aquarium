@@ -151,3 +151,27 @@ fun randomDay() : String {
 ## Fortune Cookies
 `main` must have an `args: Array<String>` for the file to be Run-able (why?)
 
+
+```kotlin
+fun main(args: Array<String>) {
+
+    var count = 10
+    do {
+        println("Enter your birthday: ")
+        getAndPrint()
+        count -= 1
+    } while (count > 0)
+}
+```
+
+Using `break`:
+```kotlin
+fun main(args: Array<String>) {
+   var fortune: String
+  for (i in 1..10) {
+    fortune = getFortune()
+    println("\nYour fortune is: $fortune")
+    if (fortune.contains("Take it easy")) break
+  }
+}
+```

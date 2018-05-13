@@ -1,6 +1,20 @@
-fun main(args: Array<String>) {
-    val fortune = getFortuneCookie()
+fun print(fortune: String) {
     println("Your fortune is: $fortune")
+}
+fun getAndPrint() {
+    val fortune = getFortuneCookie()
+    print(fortune)
+
+}
+
+fun main(args: Array<String>) {
+
+    var count = 10
+    do {
+        println("Enter your birthday: ")
+        getAndPrint()
+        count -= 1
+    } while (count > 0)
 }
 
 fun getFortuneCookie(): String {
@@ -14,7 +28,6 @@ fun getFortuneCookie(): String {
             "Treasure your friends because they are your greatest fortune."
 
     )
-    print("Enter your birthday: ")
     val birthday: Int = readLine()?.toIntOrNull() ?: 1
     val index = birthday % fortunes.size
     return fortunes[index]
