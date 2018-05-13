@@ -1,23 +1,24 @@
 fun print(fortune: String) {
     println("Your fortune is: $fortune")
 }
-fun getAndPrint() {
-    val fortune = getFortuneCookie()
-    print(fortune)
 
+
+fun getBirthday(): Int {
+    println("Enter your birthday day: ")
+    return readLine()?.toIntOrNull() ?: 1
 }
 
 fun main(args: Array<String>) {
 
-    var count = 10
-    do {
-        println("Enter your birthday: ")
-        getAndPrint()
-        count -= 1
-    } while (count > 0)
+    var fortune: String
+    for (i in 1..10) {
+        fortune = getFortune(getBirthday())
+        print(fortune)
+        if (fortune.contains("Take it easy")) break;
+    }
 }
 
-fun getFortuneCookie(): String {
+fun getFortune(birthday: Int): String {
     val fortunes = listOf(
             "You will have a great day!",
             "Things will go well for you today.",
@@ -26,9 +27,8 @@ fun getFortuneCookie(): String {
             "Today is a good day for exercising restraint",
             "Take it easy and enjoy life!",
             "Treasure your friends because they are your greatest fortune."
-
     )
-    val birthday: Int = readLine()?.toIntOrNull() ?: 1
     val index = birthday % fortunes.size
     return fortunes[index]
 }
+

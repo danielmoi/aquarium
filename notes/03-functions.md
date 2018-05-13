@@ -175,3 +175,42 @@ fun main(args: Array<String>) {
   }
 }
 ```
+
+## Fish food
+NB for the `when` statement, it automatically breaks.
+This reduces the boilerplate, and reduces the chance of writing accidental bugs.
+```kotlin
+fun fishFood(day: String): String {
+    var food = "fasting"
+    when (day) {
+        "Monday" -> food = "flakes"
+        "Tuesday" -> food = "pellets"
+        "Wednesday" -> food = "redworms"
+        "Thursday" -> food = "granules"
+        "Friday" -> food = "mosquitos"
+        "Saturday" -> food = "lettuce"
+        "Sunday" -> food = "plankton"
+    }
+    return food
+}
+```
+
+Since everything in Kotlin has a value, `when` has a value too -
+
+the last value of the expression of the branch that was picked
+
+So we can do this (NB we have to use an `else`)
+```kotlin
+fun fishFood(day: String): String {
+    return when (day) {
+        "Monday" -> "flakes"
+        "Tuesday" -> "pellets"
+        "Wednesday" -> "redworms"
+        "Thursday" -> "granules"
+        "Friday" -> "mosquitos"
+        "Saturday" -> "lettuce"
+        "Sunday" -> "plankton"
+        else -> "fasting"
+    }
+}
+```
