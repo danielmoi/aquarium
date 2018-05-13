@@ -89,3 +89,30 @@ It's good to make a list immutable
 - prevents accidental changing of objects that were meant to be unchangeable
 - in a multi-threaded environment, makes the variable thread-safe, because once
   if has been assigned by the initial thread, no thread can change it
+
+
+## Quiz
+```
+var numbers = arrayOf(11..15)
+var list = mutableListOf()
+for (n in numbers) {
+  list.add(n)
+}
+```
+
+RIGHT:
+```
+var numbers = 11..15
+var list: MutableList<Int> = mutableListOf()
+for (n in numbers) {
+    list.add(n)
+}
+```
+
+
+```
+var list: MutableList<Int> = mutableListOf()
+for (n in 0..100 step 7) {
+  list.add(n)
+}
+```
