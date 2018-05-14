@@ -9,12 +9,41 @@ fun main(args: Array<String>): Unit {
     val message = "It is ${if (temperature > 30) "hot" else "not hot"} today!"
     println(message)
     feedTheFish()
+
+//    canAddFish(10.0, currentFish = listOf(3,3,3))
+//    canAddFish(8.0, listOf(2,2,2), hasDecorations = false)
+//    canAddFish(9.0, listOf(1,1,3), 3)
+    canAddFish(10.0, listOf(), 7, true)
+}
+
+fun canAddFish(
+        tankSize: Double,
+        currentFish: List<Int>,
+        newFishSize: Int = 2,
+        hasDecorations: Boolean = true
+        ) {
+    val currentFishLength = currentFish.fold(0) { acc, i -> acc + i }
+
+    val maxLength = if (hasDecorations) {
+       tankSize * 0.8
+    } else tankSize
+
+    val can = currentFishLength + newFishSize <= maxLength
+
+
+    println("currentFishLength: $currentFishLength")
+    println("maxLength: $maxLength")
+    println("can: $can")
 }
 
 fun feedTheFish() {
     val day = randomDay()
     val food = fishFood(day)
     println("Today is $day and the fish eat $food")
+
+    if (shouldChangeWater(day)) {
+        println("Change the water today")
+    }
 }
 
 fun randomDay(): String {
@@ -51,3 +80,15 @@ fun fishFood(day: String): String {
         else -> "fasting"
     }
 }
+
+fun swim(speed: String = "fast") {
+    println("Swimming speed: $speed")
+}
+
+fun shouldChangeWater(
+        day: String,
+        temperature: Int = 22,
+        dirty: Int = 22): Boolean {
+    return true
+}
+

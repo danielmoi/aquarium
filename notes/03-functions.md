@@ -214,3 +214,53 @@ fun fishFood(day: String): String {
     }
 }
 ```
+
+## Default parameters
+```kotlin
+fun swim(speed: String = "fast") {
+    println("Swimming speed: $speed")
+}
+```
+
+we can invoke it positionally:
+```kotlin
+  swim("slow")
+```
+
+Or we can specify the argument by name:
+```kotlin
+  swim(speed: "slow")
+```
+
+We can mix things up
+```kotlin
+  swim(50, sleep = "slow")
+```
+
+It is best practice to put arguments without defaults first.
+
+## Sum
+Wrong:
+```kotlin
+var currentTotalSize = currentFish.reduce { acc, i -> acc += i }
+```
+Error: Val cannot be reassigned (we cannot reassign `acc`)
+
+
+
+Also wrong:
+```kotlin
+var currentTotalSize = currentFish.reduce { acc, i -> acc + i; 0 }
+```
+This will return zero. I think because the return value becomes `0`, regardless of the reduce function.
+
+
+This is how we reduce:
+```kotlin
+var currentTotalSize = currentFish.reduce { acc, i -> acc + i }
+```
+
+If we want to specify an initial value, we have to use `fold`:
+```kotlin
+var currentTotalSize = currentFish.fold(0) { acc, i -> acc + i }
+```
