@@ -264,3 +264,39 @@ If we want to specify an initial value, we have to use `fold`:
 ```kotlin
 var currentTotalSize = currentFish.fold(0) { acc, i -> acc + i }
 ```
+
+Caveat: we cannot reduce over an empty list:
+```
+Exception in thread "main" java.lang.UnsupportedOperationException: Empty collection can't be reduced.
+	at AMSKt.canAddFish(AMS.kt:97)
+	at AMSKt.main(AMS.kt:16)
+```
+Use `fold` instead
+
+## My solution
+```kotlin
+fun canAddFish(
+        tankSize: Double,
+        currentFish: List<Int>,
+        newFishSize: Int = 2,
+        hasDecorations: Boolean = true
+        ) {
+    val currentFishLength = currentFish.fold(0) { acc, i -> acc + i }
+
+    val maxLength = if (hasDecorations) {
+       tankSize * 0.8
+    } else tankSize
+
+    val can = currentFishLength + newFishSize <= maxLength
+    return can
+}
+```
+
+## Course solution
+- uses `List.sum()`
+- single line logic (maxLength >= newFishLength)
+```kotlin
+fun canAddFish(tankSize: Double, currentFish: List<Int>, fishSize: Int = 2, hasDecorations: Boolean = true): Boolean {
+    return (tankSize * if (hasDecorations) 0.8 else 1.0) >= (currentFish.sum() + fishSize)
+}
+```

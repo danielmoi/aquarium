@@ -30,10 +30,15 @@ fun canAddFish(
 
     val can = currentFishLength + newFishSize <= maxLength
 
+    val magic = currentFish.fold(0) { acc, i -> acc + i } + newFishSize <= if (hasDecorations) {
+        tankSize * 0.8
+    } else tankSize
+
 
     println("currentFishLength: $currentFishLength")
     println("maxLength: $maxLength")
     println("can: $can")
+    println("m")
 }
 
 fun feedTheFish() {
