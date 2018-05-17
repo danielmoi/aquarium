@@ -21,11 +21,11 @@ fun canAddFish(
         currentFish: List<Int>,
         newFishSize: Int = 2,
         hasDecorations: Boolean = true
-        ) {
+) {
     val currentFishLength = currentFish.fold(0) { acc, i -> acc + i }
 
     val maxLength = if (hasDecorations) {
-       tankSize * 0.8
+        tankSize * 0.8
     } else tankSize
 
     val can = currentFishLength + newFishSize <= maxLength
@@ -77,9 +77,9 @@ fun fishFood(day: String): String {
     return when (day) {
         "Monday" -> "flakes"
         "Tuesday" -> "pellets"
-        "Wednesday" -> "redworms"
+        "Wednesday" -> "worms"
         "Thursday" -> "granules"
-        "Friday" -> "mosquitos"
+        "Friday" -> "mosquitoes"
         "Saturday" -> "lettuce"
         "Sunday" -> "plankton"
         else -> "fasting"
@@ -94,6 +94,12 @@ fun shouldChangeWater(
         day: String,
         temperature: Int = 22,
         dirty: Int = 22): Boolean {
-    return true
+    return when {
+        temperature > 30 -> true
+        dirty > 30 -> true
+        day == "Sunday" -> true
+        else -> false
+
+    }
 }
 

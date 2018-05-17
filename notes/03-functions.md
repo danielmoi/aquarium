@@ -300,3 +300,42 @@ fun canAddFish(tankSize: Double, currentFish: List<Int>, fishSize: Int = 2, hasD
     return (tankSize * if (hasDecorations) 0.8 else 1.0) >= (currentFish.sum() + fishSize)
 }
 ```
+
+
+## Activity
+```kotlin
+fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int = 24) {
+    when (mood) {
+        mood == "happy" && weather == "Sunny" -> "Go for a walk"
+        else -> "Stay home and read"
+    }
+}
+```
+Error: `error: incompatible types: Boolean and String`
+
+Thought it was types:
+```kotlin
+fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int = 24): String {
+    return when (mood) {
+        mood == "happy" && weather == "Sunny" -> "Go for a walk"
+        else -> "Stay home and read"
+    }
+}
+```
+
+But it was SYNTAX:
+It was saying that `mood` is a Boolean...
+
+This is because `when` is a conditional, and `mood` was being coerced into a boolean (if String is present, then `true` else `false`)
+We can use `when` without parameters.
+
+With this usage, it acts as a series of `if`/`else` checks:
+```kotlin
+fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int = 24): String {
+    return when {
+        mood == "happy" && weather == "Sunny" -> "Go for a walk"
+        else -> "Stay home and read"
+    }
+}
+```
+
