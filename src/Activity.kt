@@ -11,18 +11,18 @@ fun getMood(): String {
 
 fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int = 24): String {
     return when {
-        stayInBed(mood, weather, temperature) -> "Stay in bed"
-        goSwimming(mood, weather, temperature) -> "Go swimming"
+        isSadRainyCold(mood, weather, temperature) -> "Stay in bed"
+        isHot(mood, weather, temperature) -> "Go swimming"
         mood == "happy" && weather == "Sunny" -> "Go for a walk"
         else -> "Stay home and read"
     }
 }
 
-fun stayInBed(mood: String, weather: String, temperature: Int): Boolean {
+fun isSadRainyCold(mood: String, weather: String, temperature: Int): Boolean {
     return mood == "sad" && weather == "rainy" && temperature == 0
 }
 
-fun goSwimming(mood: String, weather: String, temperature: Int): Boolean {
+fun isHot(mood: String, weather: String, temperature: Int): Boolean {
     return temperature > 35
 }
 

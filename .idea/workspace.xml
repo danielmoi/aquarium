@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a48ea5-133b-4ab9-bebc-9a4d2afdd7fc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/notes/03-functions.md" afterPath="$PROJECT_DIR$/notes/03-functions.md" />
-      <change beforePath="$PROJECT_DIR$/src/FortuneCookie.kt" afterPath="$PROJECT_DIR$/src/FortuneCookie.kt" />
+      <change beforePath="$PROJECT_DIR$/src/Activity.kt" afterPath="$PROJECT_DIR$/src/Activity.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,21 +24,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Activity.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Activity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Activity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="240">
+              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FortuneCookie.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FortuneCookie.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FortuneCookie.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,8 +83,8 @@
         <option value="$PROJECT_DIR$/src/Greetings.kt" />
         <option value="$PROJECT_DIR$/src/Fortune.kt" />
         <option value="$PROJECT_DIR$/src/AMS.kt" />
-        <option value="$PROJECT_DIR$/src/Activity.kt" />
         <option value="$PROJECT_DIR$/src/FortuneCookie.kt" />
+        <option value="$PROJECT_DIR$/src/Activity.kt" />
       </list>
     </option>
   </component>
@@ -479,18 +477,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Activity.kt">
+    <entry file="file://$PROJECT_DIR$/src/FortuneCookie.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FortuneCookie.kt">
+    <entry file="file://$PROJECT_DIR$/src/Activity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
           <folding />
         </state>
       </provider>
