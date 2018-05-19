@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10a48ea5-133b-4ab9-bebc-9a4d2afdd7fc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Lambdas.kt" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/notes/03-more-functions.md" afterPath="$PROJECT_DIR$/notes/03-more-functions.md" />
-      <change beforePath="$PROJECT_DIR$/src/AMS.kt" afterPath="$PROJECT_DIR$/src/AMS.kt" />
-      <change beforePath="$PROJECT_DIR$/src/Filter.kt" afterPath="$PROJECT_DIR$/src/Filter.kt" />
-    </list>
+    <list default="true" id="10a48ea5-133b-4ab9-bebc-9a4d2afdd7fc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
