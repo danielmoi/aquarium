@@ -502,4 +502,44 @@ val noValue = for (x in 1..2) {}
 
 while is not an expression, and only expressions are allowed here
 val notThisEither = while (false) {}
+```
+
+
+
+## Refactoring
+
+FOR >> Use a REPEAT
+```kotlin
+fun main(args: Array<String>) {
+    var fortune: String
+    for (i in 1..10) {
+        fortune = getFortune(getBirthday())
+        print(fortune)
+        if (fortune.contains("Take it easy")) break;
+    }
+}
+```
+However, we get an error:
+break and continue are only allowed inside a loop
+```kotlin
+fun main(args: Array<String>) {
+    var fortune: String
+    repeat (10) {
+        fortune = getFortune(getBirthday())
+        print(fortune)
+        if (fortune.contains("Take it easy")) break;
+    }
+}
+```
+
+So, let's use WHILE, which is the better choice when looping until a condition is met
+```kotlin
+fun main(args: Array<String>) {
+    var fortune: String = ""
+    while (!fortune.contains("Take it easy")) {
+        fortune = getFortune(getBirthday())
+        print(fortune)
+    }
+}
+```
 
