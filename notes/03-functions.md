@@ -339,3 +339,167 @@ fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int
 }
 ```
 
+## Clean code
+```kotlin
+fun shouldChangeWater(
+        day: String,
+        temperature: Int = 22,
+        dirty: Int = 22): Boolean {
+    return when {
+        temperature > 30 -> true
+        dirty > 30 -> true
+        day == "Sunday" -> true
+        else -> false
+
+    }
+}
+```
+This is complex.
+
+We can Kotlinize it.
+
+We can specify variables that provide a name for each logic test at the beginning of the function body.
+
+We should use good names, that indicate what we are testing:
+
+Then we should assign the results of the tests to these variables:
+```kotlin
+fun shouldChangeWater(
+        day: String,
+        temperature: Int = 22,
+        dirty: Int = 22): Boolean {
+
+    val isTooHot = temperature > 30
+    val isDirty = dirty > 30
+    val isSunday = day == "Sunday"
+
+    return when {
+        isTooHot -> true
+        isDirty -> true
+        isSunday -> true
+        else -> false
+
+    }
+}
+```
+
+Then we can extract these tests into functions:
+```kotlin
+fun isTooHot(temperature: Int) : Boolean = temperature > 30
+fun isDirty(dirty: Int) : Boolean = dirty > 30
+fun isSunday(day: String) : Boolean = day == "Sunday"
+```
+
+We can exclude the return type, because it is inferred.
+The function names give a hint to the return value type
+```kotlin
+fun isTooHot(temperature: Int) = temperature > 30
+fun isDirty(dirty: Int) = dirty > 30
+fun isSunday(day: String) = day == "Sunday"
+```
+
+We can declare functions in this way, whenever there is a single expression in the body.
+
+Now we can call these functions in the `when` statement:
+
+```kotlin
+fun shouldChangeWater(
+        day: String,
+        temperature: Int = 22,
+        dirty: Int = 22): Boolean {
+
+    return when {
+        isTooHot(temperature) -> true
+        isDirty(dirty) -> true
+        isSunday(day) -> true
+        else -> false
+
+    }
+}
+```
+
+##
+Instead of assigning a fixed value as the default parameter,
+
+We can assign a function, whose return value becomes the default value!
+
+```kotlin
+fun getDirtySensorReading() = 20
+```
+
+Giving us this:
+```kotlin
+fun shouldChangeWater(
+        day: String,
+        temperature: Int = 22,
+        dirty: getDirtySensorReading()): Boolean {
+
+    return when {
+        isTooHot(temperature) -> true
+        isDirty(dirty) -> true
+        isSunday(day) -> true
+        else -> false
+
+    }
+}
+```
+
+---
+
+Sometimes you might be tempted to use expensive functions to
+initialize default parameters.
+
+Examples of expensive operations:
+- reading files
+- allocating a lot of memory
+
+This is because default parameters are evaluated at CALL TIME.
+
+We can risk:
+- slowing app
+- running into out of memory errors
+
+Example:
+```kotlin
+fun makeNewAquarium() = println("Building a new aquarium...")
+
+fun aquariumStatusReport(aquarium: Any = makeNewAquarium()) {
+  // stuff
+}
+```
+
+When we call `aquariumStatusReport()`, if we have an aquarium,
+then that will get passed in, but there isn't, then an entire
+aquarium is built, which will take a long time and a lot of
+resources.
+
+If a report is requested, and called without arguments, a new aquarium will be built every time.
+This is inaccurate, and if a lot of reports are requested, then
+the application will run out of memory.
+
+
+## Other control features
+- `when`
+- `if` / `else`
+- `while`
+
+- there is also `repeat` in the standard library:
+```kotlin
+repeat(2) {
+  println("A fish is swimming!")
+}
+```
+
+This is actually an iterable, and there is `it` with the type `Int`
+behind the scenes.
+
+
+a `for` loop has no value, so assigning it to a variable will
+produce an error
+```
+for is not an expression, and only expressions are allowed here
+val noValue = for (x in 1..2) {}
+
+while is not an expression, and only expressions are allowed here
+val notThisEither = while (false) {}
+
