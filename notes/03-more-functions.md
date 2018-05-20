@@ -297,6 +297,7 @@ val rollDice = { sides: Int -> {
 
 // Should be this:
 // rollDice()
+// note that `return` is not allowed here
 val rollDice = { sides: Int ->
     if (sides == 0) 0
     Random().nextInt(sides) + 1
