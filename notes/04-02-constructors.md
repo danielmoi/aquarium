@@ -184,3 +184,48 @@ fun makeDefaultFish() = Fish(true, 50)
 ```
 
 
+## Quiz: Constructor
+Getting an error "Unresolved reference: spiciness"
+```kotlin
+class Spice(name: String, spiciness: String = "mild") {
+    val heat: Int
+        get() {
+            return when (spiciness) { // <<<<<<<<<<<<<< here
+                "mild" -> 0
+                "medium" -> 5
+                "hot" -> 10
+                else -> 5
+            }
+        }
+}
+```
+
+This is because we don't have ACCESS to the `spiciness` argument.
+
+We need to assign it to a member variable:
+```kotlin
+class Spice(name: String, val spiciness: String = "mild") {
+    val heat: Int
+        get() {
+            return when (spiciness) { // <<<<<<<<<<<<<< here
+                "mild" -> 0
+                "medium" -> 5
+                "hot" -> 10
+                else -> 5
+            }
+        }
+}
+
+fun main(args: Array<String>) {
+    val spices = listOf(
+            Spice(name = "nutmeg", spiciness = "mild"),
+            Spice(name = "pepper", spiciness = "medium"),
+            Spice(name = "curry", spiciness = "medium"),
+            Spice(name = "chili", spiciness = "hot")
+    )
+    println("spices: $spices")
+
+}
+
+// spices: [Spice.Spice@5a01ccaa, Spice.Spice@71c7db30, Spice.Spice@19bb089b, Spice.Spice@4563e9ab]
+```
