@@ -339,6 +339,17 @@ fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int
 }
 ```
 
+ALTERNATIVELY, if we were only matching on `mood` then we could do this:
+```kotlin
+fun whatShouldIDoToday(mood: String, weather: String = "Sunny", temperature: Int = 24): String {
+    return when (mood) {
+        "happy" -> "Go for a walk"
+        else -> "Stay home and read"
+    }
+}
+```
+
+
 ## Clean code
 ```kotlin
 fun shouldChangeWater(

@@ -11,4 +11,11 @@ fun buildAquarium() {
     println("Length: ${myAquarium.length}")
     println("Width: ${myAquarium.width}")
     println("Height: ${myAquarium.height}")
+    println("Volume: ${myAquarium.volume}")
+
+    myAquarium.height = 80
+    println("Height: ${myAquarium.height}")
+
+    println("Volume: ${myAquarium.volume}")
+
 }
