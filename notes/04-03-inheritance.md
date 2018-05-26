@@ -81,3 +81,67 @@ meaning to.
 
 We need to make `water` and `volume` OPEN in the parent class.
 
+```kotlin
+open class Aquarium() {
+  open var water = volume * 0.9
+}
+
+class TowerTank(): Aquarium() {
+  water = volume * 0.8
+}
+```
+
+## Inheritance Quiz
+
+My solution
+
+```kotlin
+open class Book() {
+    var title: String
+
+    var author: String
+
+    var currentPage: Int
+
+    open fun readPage() {
+        currentPage += 1
+
+    }
+}
+
+class eBook(): Book() {
+    var format: String = "text"
+
+    var wordCount: Int
+
+    override fun readPage() {
+       wordCount += 250
+    }
+}
+```
+
+- use `val` / `var` in the constructor, and this will create members
+- need to make `currentPage` PRIVATE
+- subclass constructor passes arguments to parent class
+
+Solution:
+```kotlin
+open class Book(val title: String, val author: String) {
+
+    private var currentPage: Int = 1
+
+    open fun readPage() {
+        currentPage += 1
+
+    }
+}
+
+class eBook(title: String, author: String, var format: String = "text"): Book(title, author) {
+
+    private var wordCount: Int = 1
+
+    override fun readPage() {
+       wordCount += 250
+    }
+}
+```
