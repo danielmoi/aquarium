@@ -31,3 +31,15 @@ class TowerTank(): Aquarium() {
             height = (value * 1000) / (width * length)
         }
 }
+
+abstract class AquariumFish {
+    abstract val color: String
+}
+
+class Shark: AquariumFish() {
+    override val color = "gray"
+}
+
+class Plecostomus: AquariumFish() {
+    override val color = "gold"
+}

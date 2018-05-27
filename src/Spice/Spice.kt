@@ -12,9 +12,6 @@ class Spice(val name: String, val spiciness: String = "mild") {
             }
         }
 
-    constructor(): this() {
-    }
-
     init {
         println("----------------")
         println("Spice constructed!")
@@ -32,7 +29,7 @@ fun main(args: Array<String>) {
             Spice(name = "nutmeg", spiciness = "mild"),
             Spice(name = "pepper", spiciness = "medium"),
             Spice(name = "curry", spiciness = "medium"),
-            Spice(),
+            Spice(name = "cinnamon"),
             Spice(name = "chili", spiciness = "hot")
     )
     println("spices: ${spices.map { it.name }}")
