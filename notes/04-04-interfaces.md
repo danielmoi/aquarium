@@ -161,3 +161,202 @@ you keep clear and more organized.
 
 ----
 ## Difference between Abstract Classes and Interfaces
+There is really ONE different in syntax between Abstract Classes amd Interfaces
+
+Abstract Classes (can) have constructors.
+
+Both Abstract Classes and Interfaces can contain implementation of methods
+(functions).
+
+On interfaces, we call them "Default Implementations"
+
+The big difference is in WHEN and HOW you use them.
+
+Use an Interface if you have a lot of methods and 1 or 2 default implementations
+```kotlin
+interface AquariumAction {
+  fun eat()
+  fun jump()
+  fun clean()
+  fun catchFish()
+
+  fun swim() {
+    // default implementation
+    println("Swim")
+  }
+}
+```
+
+
+Use an Abstract Class any time you can't complete a class...
+```kotlin
+interface FishAction {
+  fun eat()
+}
+
+abstract class AquariumFish: FishAction {
+  // leave "color" abstract.
+  // there really isn't a good default color for fish
+  abstract val color: String
+
+  // provide default implementation of "eat"
+  override fun eat() = println("Yum")
+}
+```
+
+
+Kotlin provides a better tool for doing this: "Interface delegation"
+
+Interface delegation allows you to add features to a class, via COMPOSITION.
+
+Composition is when you USE an instance of another class, as opposed to INHERITING
+from it.
+
+Instead of requiring the caller's subclass, a giant abstract class, give them a
+SMALL INTERFACE, and let them delegate THOSE interfaces to an object.
+
+This sounds pretty abstract.
+
+How do we DO composition?
+
+Let's define a new `main` function, to explore composition.
+
+Let's implement `delegate` to create a catfish, and print its color and food.
+
+Let's start by breaking up `AquariumFish` into interfaces!
+FishAction, and FishColor.
+
+
+Now we need to update `catfish` to implement both the fish action, and the fish
+color
+
+We can REMOVE INHERITANCE from `AquariumFish`, because we get all the
+functionality from the INTERFACES!
+
+And we don't even have to change the code in the body of plecostomus.
+```kotlin
+package Aquarium
+
+fun main(args: Array<String>) {
+    delegate()
+}
+
+fun delegate() {
+    val catfish = Plecostomus()
+    println("Fish has color ${catfish.color}")
+    catfish.eat()
+}
+
+interface FishAction {
+    fun eat()
+}
+
+interface FishColor {
+    val color: String
+}
+
+class Plecostomus: FishAction, FishColor {
+    override fun eat() {
+        println("Eat algae")
+    }
+
+    override val color: String
+        get() = "gold"
+}
+```
+
+Next, let's use INTERFACE DELEGATION to provide a color implementation.
+
+To do that, we need an OBJECT that knows how to provide a fish color.
+
+Let's make a basic object, called GoldColor that implements fish color!
+
+```kotlin
+class GoldColor: FishColor {
+    override val color = "gold"
+}
+```
+
+All it does is say that its color is gold.
+
+It doesn't make sense to make multiple instances of GoldColor because they would
+all do the exact same thing.
+
+Kotlin allows us to declare a class where we can only have ONE INSTANCE, by
+using the keyword "object" instead of "class".
+
+ie. the keyword `object` makes a class SPECIAL - we can make an instance of it,
+but only ONCE.
+
+```kotlin
+object GoldColor: FishColor {
+    override val color = "gold"
+}
+```
+This will declare a class and make exactly ONE INSTANCE of it.
+The instance is called `GoldColor` and there's no way to make another instance
+of this class.
+
+If you're familiar with the Singleton pattern, this is how to implement it in
+Kotlin.
+
+We're all set to use "Interface Delegation" now.
+
+In `Plecostomus`, we say `by GoldColor` next to `FishColor`.
+
+And we remove the MEMBER VARIABLE `color`:
+
+```kotlin
+class Plecostomus: FishAction, FishColor by GoldColor {
+  override fun eat() = println("Eat algae")
+
+  // we have removed
+  // override fun color() = "gold"
+}
+```
+
+This means:
+- implement the interface fish color, by deferring all calls TO THE OBJECT
+  `GoldColor`
+
+So every time you call the color property on the `Plecostomus` class, it will actually call
+the color property on the `GoldColor` object!!
+
+Of course, there are DIFFERENT colors of plecostomi in the world.
+
+So, we can make the `FishColor` object a CONSTRUCTOR PARAMETER with a default
+value of GOLD.
+
+And defer CALLS to the COLOR property to whatever fish color we get passed in.
+
+```kotlin
+class Plecostomus(fishColor: FishColor = GoldColor()) : FishAction, FishColor by fishColor {
+    override fun eat() {
+        println("Eat algae")
+    }
+}
+```
+
+We can delegate print fish action to a class too, and we don't need the curly
+braces anymore either, because our `Plecostomus` doesn't have a body!!
+
+All its overrides are handled by interface delegation.
+
+
+```kotlin
+class Plecostomus2(fishColor: FishColor2 = GoldColor()) :
+        FishAction2 by PrintingFishAction("A lot of algae"),
+        FishColor2 by fishColor
+```
+
+
+----
+## Summary
+Interface delegation is really powerful.
+
+And you should generally consider how to use it whenever you might use an
+abstract class in another language.
+
+It lets you use composition to plug-in behaviours!
+
+Instead of requiring a lot of SUBCLASSES, each specialized in a different way.

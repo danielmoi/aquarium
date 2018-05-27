@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a48ea5-133b-4ab9-bebc-9a4d2afdd7fc" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Aquarium/Interface.kt" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/notes/04-04-interfaces.md" afterPath="$PROJECT_DIR$/notes/04-04-interfaces.md" />
-      <change beforePath="$PROJECT_DIR$/src/Aquarium/Aquarium.kt" afterPath="$PROJECT_DIR$/src/Aquarium/Aquarium.kt" />
-      <change beforePath="$PROJECT_DIR$/src/Aquarium/Main.kt" afterPath="$PROJECT_DIR$/src/Aquarium/Main.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +52,8 @@
       <file leaf-file-name="Aquarium.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Aquarium/Aquarium.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="477">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,11 +69,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Aquarium/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="507">
               <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interface.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Aquarium/Interface.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,23 +119,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Greetings.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Greetings.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -158,6 +158,8 @@
         <option value="$PROJECT_DIR$/src/Spice/Spice.kt" />
         <option value="$PROJECT_DIR$/src/Aquarium/Aquarium.kt" />
         <option value="$PROJECT_DIR$/src/Aquarium/Main.kt" />
+        <option value="$PROJECT_DIR$/src/Interface.kt" />
+        <option value="$PROJECT_DIR$/src/Aquarium/Interface.kt" />
       </list>
     </option>
   </component>
@@ -799,18 +801,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Aquarium/Aquarium.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Aquarium/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Aquarium/Aquarium.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Aquarium/Interface.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
