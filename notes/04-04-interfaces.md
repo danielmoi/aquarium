@@ -67,14 +67,13 @@ Let's add a function `makeFish` to our `Main` file.
 ----
 ## Interface
 Let's make an interface, `FishAction`, that defines an `eat` function.
-
-Let's update our Shark and Plecostomus classes
-
 ```kotlin
-class FishAction {
-  fun eat()
+interface FishAction {
+    fun eat()
 }
 ```
+
+Let's update our Shark and Plecostomus classes
 
 After we add `FishAction` interface to our `Shark` Class, we get this warning:
 ```

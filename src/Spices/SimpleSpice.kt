@@ -1,4 +1,4 @@
-package Spice
+package Spices
 
 class SimpleSpice {
     var name: String = "curry"

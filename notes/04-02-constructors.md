@@ -227,5 +227,5 @@ fun main(args: Array<String>) {
 
 }
 
-// spices: [Spice.Spice@5a01ccaa, Spice.Spice@71c7db30, Spice.Spice@19bb089b, Spice.Spice@4563e9ab]
+Spices
 ```

@@ -1,4 +1,4 @@
-package Spice
+package Spices
 
 class Spice(val name: String, val spiciness: String = "mild") {
     val heat: Int
@@ -14,7 +14,7 @@ class Spice(val name: String, val spiciness: String = "mild") {
 
     init {
         println("----------------")
-        println("Spice constructed!")
+        println("Spices constructed!")
         println("name: $name")
         println("spiciness: $spiciness")
         println("heat: $heat")
