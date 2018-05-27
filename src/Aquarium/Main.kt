@@ -38,4 +38,14 @@ fun makeFish() {
 
     println("Shark: ${shark.color}")
     println("Plecostomus: ${catfish.color}")
+
+    shark.eat()
+    catfish.eat()
 }
+
+fun feedFish(fish: FishAction) {
+    // make some food then
+    fish.eat()
+}
+
+
