@@ -95,3 +95,10 @@ fun matchSeal(seal: Seal): String {
 ```
 
 And if we don't match all the different types of seal, we get a compiler error.
+
+Making Spice a sealed class helps keep all the spices together in one file.
+
+
+## Hex
+We can convert integers to hex with `0x`.
+
