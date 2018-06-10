@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a48ea5-133b-4ab9-bebc-9a4d2afdd7fc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Aquarium/Decorations/Decorations.kt" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/Spices/Spice2.kt" afterPath="$PROJECT_DIR$/src/Spices/Spice2.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,16 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Fish.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Aquarium/Fish.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SimpleSpice.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Spices/SimpleSpice.kt">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,21 +37,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spice2.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Spice2.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Spices/Spice2.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+            <state relative-caret-position="734">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Decorations.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Decorations.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Aquarium/Decorations/Decorations.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+            <state relative-caret-position="450">
+              <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spice.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Spices/Spice.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -168,8 +167,8 @@
         <option value="$PROJECT_DIR$/src/Interface.kt" />
         <option value="$PROJECT_DIR$/src/Aquarium/Interface.kt" />
         <option value="$PROJECT_DIR$/src/Spices/SimpleSpice.kt" />
-        <option value="$PROJECT_DIR$/src/Spices/Spice2.kt" />
         <option value="$PROJECT_DIR$/src/Aquarium/Decorations/Decorations.kt" />
+        <option value="$PROJECT_DIR$/src/Spices/Spice2.kt" />
       </list>
     </option>
   </component>
@@ -281,7 +280,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.Aquarium.Decorations.DecorationsKt">
+  <component name="RunManager" selected="Kotlin.Spices.Spice2Kt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -442,8 +441,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Kotlin.Aquarium.Decorations.DecorationsKt" />
-        <item index="1" class="java.lang.String" itemvalue="Kotlin.Spices.Spice2Kt" />
+        <item index="0" class="java.lang.String" itemvalue="Kotlin.Spices.Spice2Kt" />
+        <item index="1" class="java.lang.String" itemvalue="Kotlin.Aquarium.Decorations.DecorationsKt" />
         <item index="2" class="java.lang.String" itemvalue="Kotlin.Aquarium.MainKt" />
         <item index="3" class="java.lang.String" itemvalue="Kotlin.Spices.SpiceKt" />
         <item index="4" class="java.lang.String" itemvalue="Kotlin.Aquarium.FishKt" />
@@ -468,11 +467,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="840" y="23" width="840" height="989" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -859,26 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spices/Spice.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Spices/SimpleSpice.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Spices/Spice2.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -909,8 +891,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Aquarium/Decorations/Decorations.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        <state relative-caret-position="450">
+          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Spices/Spice.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Spices/Spice2.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
