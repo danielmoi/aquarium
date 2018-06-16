@@ -15,8 +15,9 @@ Both are classes that cannot be instantiated on their own.
 
 This means you cannot create objects of those types yet.
 
-The difference is that abstract classes have constructors, whereas interfaces
-cannot have any constructor logic.
+The difference is that:
+- ABSTRACT classes have CONSTRUCTORS, whereas
+- INTERFACES do NOT have any constructor logic.
 
 ----
 ## Abstract Class

@@ -62,7 +62,7 @@ class TowerTank(): Aquarium() {
 ```
 
 
-We also need to override the get function for the volume
+We also need to override the `get` function for the volume
 
 ```kotlin
 class TowerTank(): Aquarium() {
@@ -79,7 +79,7 @@ sub-classing by default
 This is so that we don't accidentally leak implementation details without
 meaning to.
 
-We need to make `water` and `volume` OPEN in the parent class.
+We need to make `water` and `volume` OPEN in the PARENT class.
 
 ```kotlin
 open class Aquarium() {
@@ -91,6 +91,7 @@ class TowerTank(): Aquarium() {
 }
 ```
 
+---
 ## Inheritance Quiz
 
 My solution
@@ -120,7 +121,8 @@ class eBook(): Book() {
 }
 ```
 
-- use `val` / `var` in the constructor, and this will create members
+- we can use `val` / `var` in the constructor, and Kotlin will create members
+  for us
 - need to make `currentPage` PRIVATE
 - subclass constructor passes arguments to parent class
 

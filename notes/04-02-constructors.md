@@ -204,7 +204,7 @@ This is because we don't have ACCESS to the `spiciness` argument.
 
 We need to assign it to a member variable:
 ```kotlin
-class Spice(name: String, val spiciness: String = "mild") {
+class Spice(name: String, val spiciness: String = "mild") { // <<<<<<<<< "var"
     val heat: Int
         get() {
             return when (spiciness) { // <<<<<<<<<<<<<< here
