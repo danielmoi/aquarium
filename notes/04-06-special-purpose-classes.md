@@ -20,6 +20,8 @@ In this example, `MobyDickWhale` is an object, and there can only be one
 Kotlin also has enums, which let you enumerate items.
 
 Here, we're declaring an enum with red, green, and blue colors:
+We are also initializing the enums with a property "rgb"
+ie. we are giving "RED" the property `rgb` with a value of `0xFF0000`
 ```kotlin
 enum class Color(val rgb: Int) {
   RED(0xFF0000),

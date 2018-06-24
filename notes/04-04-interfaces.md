@@ -27,7 +27,9 @@ Abstract classes start with the `abstract` KEYWORD.
 
 Because `AquariumFish` is abstract, we can't make instances of it directly.
 
-We need to provide SUBCLASSES that implement its MISSING FUNCTIONALITY.
+We NEED to provide SUBCLASSES that implement its MISSING FUNCTIONALITY.
+
+ie. Abstract classes are a way of enforcing how they are used.
 
 Let's create 2 subclasses!
 ```kotlin
@@ -43,7 +45,7 @@ class Shark: AquariumFish() {
 }
 ```
 
-This leaves us with errors because have to IMPLEMENT the ABSTRACT PROPERTY
+This leaves us with errors because HAVE to IMPLEMENT the ABSTRACT PROPERTY
 "color".
 
 ```kotlin

@@ -54,7 +54,7 @@ Process finished with exit code 0
 
 
 ## Benefit 2 = comparison
-The data calss provides an equals method to compare 2 instances of a data class
+The data class provides an equals method to compare 2 instances of a data class
 
 ```kotlin
 fun makeDecorations() {
