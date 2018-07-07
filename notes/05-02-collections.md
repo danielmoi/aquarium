@@ -118,4 +118,9 @@ SO, `listOf` and `mapOf` make IMMUTABLE COLLECTIONS
 Immutable collections are particularly useful in a THREADED environment where
 you might be in trouble if multiple threads touch the same collection.
 
-
+---
+a SET is:
+- a generic unordered collection of elements
+- does not support duplicate elements
+- methods in this interface only support read-only access to the set
+- read/write access is supported through the MutableSet interface
