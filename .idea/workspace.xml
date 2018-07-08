@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a48ea5-133b-4ab9-bebc-9a4d2afdd7fc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Constants/Constants.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Constants/ConstantsQuiz.kt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/notes/05-03-constants.md" afterPath="$PROJECT_DIR$/notes/05-03-constants.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,16 +39,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Collections.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Collections/Collections.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Symptoms.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Collections/Symptoms.kt">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,11 +59,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Constants.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Constants/Constants.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
               <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConstantsQuiz.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Constants/ConstantsQuiz.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,6 +178,7 @@
         <option value="$PROJECT_DIR$/src/Collections/Symptoms.kt" />
         <option value="$PROJECT_DIR$/src/Collections/CollectionsQuiz.kt" />
         <option value="$PROJECT_DIR$/src/Constants/Constants.kt" />
+        <option value="$PROJECT_DIR$/src/Constants/ConstantsQuiz.kt" />
       </list>
     </option>
   </component>
@@ -306,7 +308,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.Constants.ConstantsKt">
+  <component name="RunManager" selected="Kotlin.Constants.ConstantsQuizKt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -395,14 +397,14 @@
       <module name="aquarium" />
       <envs />
     </configuration>
-    <configuration name="Pairs.PairsQuizKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="Constants.ConstantsQuizKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Pairs.PairsQuizKt" />
+      <option name="MAIN_CLASS_NAME" value="Constants.ConstantsQuizKt" />
       <option name="WORKING_DIRECTORY" />
       <module name="aquarium" />
       <envs />
@@ -483,19 +485,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Kotlin.Pairs.PairsQuizKt" />
-      <item index="1" class="java.lang.String" itemvalue="Kotlin.Collections.CollectionsKt" />
-      <item index="2" class="java.lang.String" itemvalue="Kotlin.Collections.SymptomsKt" />
-      <item index="3" class="java.lang.String" itemvalue="Kotlin.Collections.CollectionsQuizKt" />
-      <item index="4" class="java.lang.String" itemvalue="Kotlin.Constants.ConstantsKt" />
+      <item index="0" class="java.lang.String" itemvalue="Kotlin.Collections.CollectionsKt" />
+      <item index="1" class="java.lang.String" itemvalue="Kotlin.Collections.SymptomsKt" />
+      <item index="2" class="java.lang.String" itemvalue="Kotlin.Collections.CollectionsQuizKt" />
+      <item index="3" class="java.lang.String" itemvalue="Kotlin.Constants.ConstantsKt" />
+      <item index="4" class="java.lang.String" itemvalue="Kotlin.Constants.ConstantsQuizKt" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Kotlin.Constants.ConstantsKt" />
-        <item index="1" class="java.lang.String" itemvalue="Kotlin.Collections.CollectionsQuizKt" />
-        <item index="2" class="java.lang.String" itemvalue="Kotlin.Collections.SymptomsKt" />
-        <item index="3" class="java.lang.String" itemvalue="Kotlin.Collections.CollectionsKt" />
-        <item index="4" class="java.lang.String" itemvalue="Kotlin.Pairs.PairsQuizKt" />
+        <item index="0" class="java.lang.String" itemvalue="Kotlin.Constants.ConstantsQuizKt" />
+        <item index="1" class="java.lang.String" itemvalue="Kotlin.Constants.ConstantsKt" />
+        <item index="2" class="java.lang.String" itemvalue="Kotlin.Collections.CollectionsQuizKt" />
+        <item index="3" class="java.lang.String" itemvalue="Kotlin.Collections.SymptomsKt" />
+        <item index="4" class="java.lang.String" itemvalue="Kotlin.Collections.CollectionsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -563,13 +565,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Lambdas.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Spices/Spice.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -848,22 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pairs/Pairs.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pairs/PairsQuiz.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Collections/Collections.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -924,6 +903,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pairs/Pairs.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pairs/PairsQuiz.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Constants/ConstantsQuiz.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>

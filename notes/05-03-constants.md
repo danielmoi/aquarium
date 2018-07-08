@@ -36,3 +36,19 @@ The basic difference between COMPANION OBJECTS and regular OBJECTS is:
   - ie. they are created when the class/object is created
 - plain objects are initialized LAZILY on the first ACCESS to that object
   - ie. they are created when they are first USED
+
+---
+## Constants / ENUM / Data class?
+
+- CONSTANT
+Storing simple values without any functionality.
+For example, a URL or a numeric code.
+
+- ENUM
+They are objects that store groups of values that are related.
+They offer type safety
+
+- DATA CLASS
+Creating objects that only have properties without additional functionality.
+  They are class instances, so they are objects = grouping properties / a group
+  of values.
