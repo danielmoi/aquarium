@@ -50,5 +50,6 @@ They offer type safety
 
 - DATA CLASS
 Creating objects that only have properties without additional functionality.
-  They are class instances, so they are objects = grouping properties / a group
-  of values.
+They are class instances, so they are objects
+- good for grouping properties
+- a group of values
