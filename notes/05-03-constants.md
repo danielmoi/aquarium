@@ -1,6 +1,6 @@
 # Constants
 
-In Kotlin, we can make top leve constants, and assign them a value at COMPILE
+In Kotlin, we can make top level constants, and assign them a value at COMPILE
 TIME using `const val`...
 
 So we have `val` and `const val`
@@ -31,10 +31,10 @@ To define constants in a class, you have to wrap them into a COMPANION OBJECT.
 ```
 
 The basic difference between COMPANION OBJECTS and regular OBJECTS is:
-- companion objects are initialized from the STATIC CONSTRUCTOR of the
+- COMPANION OBJECTS are initialized from the STATIC CONSTRUCTOR of the
   containing class
-  - ie. they are created when the class/object is created
-- plain objects are initialized LAZILY on the first ACCESS to that object
+  - ie. they are created when the class/object is CREATED
+- PLAIN OBJECTS are initialized LAZILY on the first ACCESS to that object
   - ie. they are created when they are first USED
 
 ---
