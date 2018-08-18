@@ -102,3 +102,12 @@ This allows us to redefine stuff, using the same names, without conflicts.
 
 NB. Files don't have to have the same name as their class.
 And you can have multiple classes in one file.
+
+Let's make a TYPE HIERARCHY.
+
+
+(DONE, see generics.Aquarium)
+
+----
+So now we know how to
+- declare a generic class with an "upper bound" and use it

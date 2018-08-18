@@ -131,16 +131,59 @@ class Aquarium2<T: WaterSupply>(val waterSupply: T) {
     }
 }
 
+
+
+
 fun checkExamples() {
     val aquarium = Aquarium2(LakeWater())
     aquarium.addWater()
 }
 
+// OUT TYPES
+class AquariumOutType<out T: WaterSupply>(val waterSupply: T) {
+    fun addWater(cleaner: Cleaner<T>) {
+        if (waterSupply.needsProcessed) {
+            println("Adding water from ${waterSupply::class.simpleName}")
+            cleaner.clean(waterSupply)
+        }
+    }
+}
+// Kotlin can ensure that addItemTo won't do anything unsafe with a generic
+fun addItemTo(aquarium: AquariumOutType<WaterSupply>) = println("item added")
 
+
+fun outExample() {
+    // val aquarium = Aquarium2(TapWater())
+    // addItemTo(aquarium)
+    // the compiler gives us an error
+    // Error:(154, 15) Kotlin: Type mismatch: inferred type is Aquarium2<TapWater>
+    // but Aquarium2<WaterSupply> was expected
+
+    val aquariumOutType = AquariumOutType(TapWater())
+    addItemTo(aquariumOutType)
+}
+
+// IN TYPES
+interface Cleaner<in T: WaterSupply> {
+    fun clean(waterSupply: T)
+}
+class TapWaterCleaner: Cleaner<TapWater> {
+    override fun clean(waterSupply: TapWater) {
+        waterSupply.addChemicalCleaners()
+    }
+}
+fun inExample() {
+    val cleaner = TapWaterCleaner()
+    val aquarium = AquariumOutType(TapWater())
+    aquarium.addWater(cleaner)
+}
 
 fun main(args: Array<String>) {
-    oops()
-    nullExample()
+//    oops()
+//    nullExample()
+//
+//    checkExamples()
+    outExample()
 
-    checkExamples()
+    inExample()
 }
