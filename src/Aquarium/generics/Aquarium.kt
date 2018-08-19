@@ -39,7 +39,7 @@ class LakeWater : WaterSupply(true) {
 // ie. "type" followed by the name of the generic.
 
 // let's add an IMMUTABLE property WaterSupply of type T to Aquarium
-class Aquarium<T> (val waterSupply: T) {
+class Aquarium<T>(val waterSupply: T) {
 
 }
 
@@ -107,7 +107,7 @@ fun nullExample() {
 // We can replace "Any" with any type we want
 // class Aquarium<T: WaterSupply>(val waterSupply: T)
 
-class Aquarium2<T: WaterSupply>(val waterSupply: T) {
+class Aquarium2<T : WaterSupply>(val waterSupply: T) {
     fun addWater() {
         // "check" is a standard library function in Kotlin
         // it's really convenient for checking the state of your classes
@@ -132,22 +132,39 @@ class Aquarium2<T: WaterSupply>(val waterSupply: T) {
 }
 
 
-
-
 fun checkExamples() {
     val aquarium = Aquarium2(LakeWater())
     aquarium.addWater()
 }
 
 // OUT TYPES
-class AquariumOutType<out T: WaterSupply>(val waterSupply: T) {
+class AquariumOutType<out T : WaterSupply>(val waterSupply: T) {
     fun addWater(cleaner: Cleaner<T>) {
         if (waterSupply.needsProcessed) {
             println("Adding water from ${waterSupply::class.simpleName}")
             cleaner.clean(waterSupply)
         }
     }
+
+    // this method has a generic parameter R
+    // R is "bound" by WaterSupply
+    // in order to do an "is" comparison, we have to tell Kotlin
+    // that it's REIFIED (real)
+    // a reified type is a real type
+    // to make a type reified, use the keyword "inline" before "fun"
+    // and "reified" before R
+    // fun <R: WaterSupply> hasWaterSupplyOfType() = waterSupply is R
+
+    // anytime we call this function, it will automatically be dropped in place of the call
+    // the compiler then figures out what type R would have been
+    // and uses the real type
+    // once a type has been reified, you can use it just like a normal type
+
+    // this is because non-reified types are only available at compile time
+    // but can't be used at RUNTIME by your program
+    inline fun <reified R : WaterSupply> hasWaterSupplyOfType() = waterSupply is R
 }
+
 // Kotlin can ensure that addItemTo won't do anything unsafe with a generic
 fun addItemTo(aquarium: AquariumOutType<WaterSupply>) = println("item added")
 
@@ -164,19 +181,48 @@ fun outExample() {
 }
 
 // IN TYPES
-interface Cleaner<in T: WaterSupply> {
+interface Cleaner<in T : WaterSupply> {
     fun clean(waterSupply: T)
 }
-class TapWaterCleaner: Cleaner<TapWater> {
+
+class TapWaterCleaner : Cleaner<TapWater> {
     override fun clean(waterSupply: TapWater) {
         waterSupply.addChemicalCleaners()
     }
 }
+
 fun inExample() {
     val cleaner = TapWaterCleaner()
     val aquarium = AquariumOutType(TapWater())
     aquarium.addWater(cleaner)
 }
+
+
+// GENERIC FUNCTIONS
+fun <T : WaterSupply> isWaterClean(aquarium: AquariumOutType<T>) {
+    println("aquarium water is clean? ${aquarium.waterSupply.needsProcessed}")
+}
+
+fun genericFunExample() {
+    val aquarium = AquariumOutType(TapWater())
+    isWaterClean(aquarium)
+
+    // call generic methods by using angle brackets after the function name
+    // "TapWater" is the TYPE PARAMETER for R
+    aquarium.hasWaterSupplyOfType<TapWater>()
+    aquarium.waterSupply.isOfType<TapWater>()
+    aquarium.extensionHasWaterSupplyOfType<TapWater>()
+}
+
+inline fun <reified T : WaterSupply> WaterSupply.isOfType()
+        = println("${this::class.simpleName} is ${T::class.simpleName}? ${this is T}")
+
+// we can also use "STAR PROTECTION" to say i'll take ANY VERSION of that generic type
+
+// GENERIC EXTENSION FUNCTIONS
+inline fun <reified R : WaterSupply> AquariumOutType<*>.extensionHasWaterSupplyOfType()
+        = println("${waterSupply::class.simpleName} is ${R::class.simpleName}? ${this is R}")
+
 
 fun main(args: Array<String>) {
 //    oops()
@@ -186,4 +232,6 @@ fun main(args: Array<String>) {
     outExample()
 
     inExample()
+
+    genericFunExample()
 }
