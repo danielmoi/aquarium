@@ -49,7 +49,7 @@ In and out, generic functions, reified, star projections.
 
 Only ONE more topic, and that will be a good start to Kotlin generics!
 
-TYPE ERASURE.
+## TYPE ERASURE.
 This will come up in some error messages that the compiler produces
 
 All generic types are only used at COMPILE TIME by Kotlin.
@@ -58,7 +58,7 @@ However, at RUNTIME, all the generic types are erased.
 
 The compiler can create completely correct code without keeping the generic types to runtime.
 
-But it does mean that sometimes you do something like "isChecks" on a generic type 
+But it does mean that sometimes you do something like "isChecks" on a generic type
 that the compiler can't support.
 
 That's why Kotlin added reified or REAL TYPES.
