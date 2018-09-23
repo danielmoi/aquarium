@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a48ea5-133b-4ab9-bebc-9a4d2afdd7fc" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Inline/Inline.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HigherOrderFunctions/HigherOrderFunctionsQuiz.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/HigherOrderFunctions/HigherOrderFunctionsQuiz.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,27 +28,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="1" />
-          <entry key="kt" value="11" />
+          <entry key="kt" value="12" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="1" />
-          <entry key="Kotlin" value="11" />
+          <entry key="Kotlin" value="12" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Kotlin Console" value="28" />
-          <entry key="kt" value="12670" />
+          <entry key="kt" value="14489" />
           <entry key="md" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="12698" />
+          <entry key="Kotlin" value="14517" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -150,11 +150,20 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/HigherOrderFunctions/HigherOrderFunctionsQuiz.kt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="555">
-                  <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+                  <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Inline/Inline.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="489">
+                  <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -230,6 +239,7 @@
         <option value="$PROJECT_DIR$/src/LambdasQuiz/LambdasQuiz.kt" />
         <option value="$PROJECT_DIR$/src/HigherOrderFunctions/HigherOrderFunctions.kt" />
         <option value="$PROJECT_DIR$/src/HigherOrderFunctions/HigherOrderFunctionsQuiz.kt" />
+        <option value="$PROJECT_DIR$/src/Inline/Inline.kt" />
       </list>
     </option>
   </component>
@@ -325,6 +335,12 @@
               <item name="aquarium" type="b2602c69:ProjectViewProjectNode" />
               <item name="aquarium" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Inline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aquarium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aquarium" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="LabelledBreaks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -410,7 +426,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537590919051" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537664554677" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -431,7 +447,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.HigherOrderFunctions.HigherOrderFunctionsQuizKt">
+  <component name="RunManager" selected="Kotlin.Inline.InlineKt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -476,14 +492,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LabelledBreaks.LabelledBreaksKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="Inline.InlineKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="aquarium" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="LabelledBreaks.LabelledBreaksKt" />
+      <option name="MAIN_CLASS_NAME" value="Inline.InlineKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -533,19 +549,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin.LabelledBreaks.LabelledBreaksKt" />
       <item itemvalue="Kotlin.LambdasRecap.LambdasRecapKt" />
       <item itemvalue="Kotlin.LambdasQuiz.LambdasQuizKt" />
       <item itemvalue="Kotlin.HigherOrderFunctions.HigherOrderFunctionsKt" />
       <item itemvalue="Kotlin.HigherOrderFunctions.HigherOrderFunctionsQuizKt" />
+      <item itemvalue="Kotlin.Inline.InlineKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Inline.InlineKt" />
         <item itemvalue="Kotlin.HigherOrderFunctions.HigherOrderFunctionsQuizKt" />
         <item itemvalue="Kotlin.HigherOrderFunctions.HigherOrderFunctionsKt" />
         <item itemvalue="Kotlin.LambdasQuiz.LambdasQuizKt" />
         <item itemvalue="Kotlin.LambdasRecap.LambdasRecapKt" />
-        <item itemvalue="Kotlin.LabelledBreaks.LabelledBreaksKt" />
       </list>
     </recent_temporary>
   </component>
@@ -861,7 +877,14 @@
     <entry file="file://$PROJECT_DIR$/src/HigherOrderFunctions/HigherOrderFunctionsQuiz.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inline/Inline.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
         </state>
       </provider>
     </entry>
